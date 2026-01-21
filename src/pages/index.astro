@@ -1,13 +1,17 @@
 ---
-// Importamos el Layout para que la página herede el Header y los estilos
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro'; // Importamos la nueva sección
 ---
 
-<Layout title="Inici">
-  <section class="h-screen flex items-center justify-center">
-    <div class="text-center">
-      <h1 class="text-6xl md:text-8xl mb-4">La Casa de Fusta</h1>
-      <p class="text-xl font-aktifob tracking-[0.2em] uppercase">Proximament: Licoturisme al Parc Natural</p>
+<Layout title="Licoturisme i Natura">
+  <Hero />
+  
+  <About />
+  
+  <section id="experiencies" class="min-h-screen bg-verde-picea text-crema-organico py-24">
+    <div class="max-w-7xl mx-auto px-6">
+       <h2 class="font-the-seasons text-5xl">Pròximes Experiències</h2>
     </div>
   </section>
 </Layout>

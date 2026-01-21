@@ -1,0 +1,68 @@
+---
+/* Componente Hero - La Casa de Fusta */
+/* Ajustado para evitar solapamiento con el Header fijo de h-24 */
+---
+<section class="relative h-screen w-full overflow-hidden flex items-center justify-center bg-verde-picea">
+  
+  <div class="absolute inset-0 z-0">
+    <video 
+      autoplay 
+      muted 
+      loop 
+      playsinline 
+      class="w-full h-full object-cover scale-105"
+    >
+      <source src="/hero-video.mp4" type="video/mp4" />
+      <div class="w-full h-full bg-verde-picea"></div>
+    </video>
+    
+    <div class="absolute inset-0 bg-gradient-to-b from-verde-picea/50 via-verde-picea/20 to-verde-picea/60"></div>
+  </div>
+
+  <div class="relative z-10 text-center px-6 max-w-5xl pt-24 flex flex-col items-center">
+    
+    <span class="block text-crema-organico font-aktifob text-xs md:text-sm tracking-[0.4em] uppercase mb-6 opacity-0 animate-fade-in">
+      Benvinguts a la Casa de Fusta
+    </span>
+    
+    <h1 class="text-crema-organico text-5xl md:text-8xl mb-8 leading-[1.1] font-the-seasons font-normal opacity-0 animate-reveal">
+      Re-connecta amb <br class="hidden md:block"/> l'essència de la muntanya
+    </h1>
+    
+    <p class="text-crema-organico/90 font-aktifob text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed opacity-0 animate-fade-in-delayed">
+      Una proposta innovadora que integra senderisme interpretatiu, tallers de plantes i licors artesans al Parc Natural de Sant Llorenç del Munt i l’Obac.
+    </p>
+    
+    <div class="opacity-0 animate-fade-in-delayed-2">
+      <a 
+        href="#experiencies" 
+        class="group relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-aktifob text-crema-organico border border-crema-organico/30 rounded-full transition-all duration-500 hover:border-madera-calida"
+      >
+        <span class="absolute inset-0 w-full h-full bg-madera-calida translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
+        <span class="relative text-xs tracking-[0.2em] uppercase">Explorar Experiències</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 opacity-30">
+    <div class="w-px h-16 bg-gradient-to-b from-crema-organico to-transparent animate-pulse"></div>
+  </div>
+</section>
+
+<style>
+  /* Animaciones personalizadas para una entrada suave y elegante */
+  .animate-fade-in { animation: fadeIn 1.5s ease-out forwards; }
+  .animate-reveal { animation: reveal 1.8s cubic-bezier(0.2, 1, 0.3, 1) 0.3s forwards; }
+  .animate-fade-in-delayed { animation: fadeIn 1.5s ease-out 0.8s forwards; }
+  .animate-fade-in-delayed-2 { animation: fadeIn 1.5s ease-out 1.2s forwards; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
