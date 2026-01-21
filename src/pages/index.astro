@@ -1,11 +1,13 @@
 ---
-import Welcome from '../components/Welcome.astro';
+// Importamos el Layout para que la página herede el Header y los estilos
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Inici">
+  <section class="h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-6xl md:text-8xl mb-4">La Casa de Fusta</h1>
+      <p class="text-xl font-aktifob tracking-[0.2em] uppercase">Proximament: Licoturisme al Parc Natural</p>
+    </div>
+  </section>
 </Layout>

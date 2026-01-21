@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  /* Configuración de colores inspirada en la naturaleza de Sant Llorenç */
+  --color-verde-picea: #2D3A2D; /* Profundo, para textos y confianza */
+  --color-madera-calida: #B58D67; /* Acentos y CTAs artesanales */
+  --color-crema-organico: #F9F7F2; /* Fondo de calma y serenidad */
+  --color-gris-pedra: #7A7A7A; /* Detalles secundarios de montaña */
+
+  /* Tipografías definidas en tu estrategia de Branding */
+  --font-the-seasons: "The Seasons", serif;
+  --font-aktifob: "Aktifo B", sans-serif;
+}
+
+/* Aplicamos la base visual del proyecto */
+body {
+  @apply bg-crema-organico text-verde-picea font-aktifob;
+  /* El fondo crema evita la fatiga visual y aporta calidez */
+}
+
+h1, h2, h3, h4 {
+  @apply font-the-seasons font-normal;
+  /* La elegancia de The Seasons para los títulos principales */
+}
