@@ -1,26 +1,49 @@
 ---
-/* Componente Header Clásico - La Casa de Fusta */
+/* Header  - La Casa de Fusta */
 ---
 <header class="fixed top-0 left-0 w-full z-50 bg-crema-organico/90 backdrop-blur-sm border-b border-verde-picea/10">
   <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+    
     <div class="flex-shrink-0">
-      <a href="/" class="text-2xl font-the-seasons tracking-wider text-verde-picea uppercase">
+      <a href="/" class="text-2xl font-the-seasons tracking-wider text-verde-picea uppercase transition-all duration-500 hover:tracking-[0.2em]">
         La Casa de Fusta
       </a>
     </div>
 
     <nav class="hidden md:flex space-x-10 text-sm tracking-widest uppercase font-aktifob">
-      <a href="#experiencies" class="hover:text-madera-calida transition-colors">Experiències</a>
-      <a href="#projecte" class="hover:text-madera-calida transition-colors">El Projecte</a>
-      <a href="#quisom" class="hover:text-madera-calida transition-colors">Qui Som</a>
-      <a href="#blog" class="hover:text-madera-calida transition-colors">Blog</a>
-      <a href="#contacte" class="hover:text-madera-calida transition-colors">Contacte</a>
+      <a href="#experiencies" class="relative hover:text-madera-calida transition-colors group">
+        Experiències
+        <span class="absolute -bottom-1 left-0 w-0 h-px bg-madera-calida transition-all duration-500 group-hover:w-full"></span>
+      </a>
+      <a href="#projecte" class="relative hover:text-madera-calida transition-colors group">
+        El Projecte
+        <span class="absolute -bottom-1 left-0 w-0 h-px bg-madera-calida transition-all duration-500 group-hover:w-full"></span>
+      </a>
+      <a href="#quisom" class="relative hover:text-madera-calida transition-colors group">
+        Qui Som
+        <span class="absolute -bottom-1 left-0 w-0 h-px bg-madera-calida transition-all duration-500 group-hover:w-full"></span>
+      </a>
+      <a href="#contacte" class="relative hover:text-madera-calida transition-colors group">
+        Contacte
+        <span class="absolute -bottom-1 left-0 w-0 h-px bg-madera-calida transition-all duration-500 group-hover:w-full"></span>
+      </a>
     </nav>
 
     <div>
-      <a href="#reservar" class="bg-madera-calida text-crema-organico px-8 py-3 rounded-full text-xs tracking-widest uppercase hover:bg-verde-picea transition-all duration-300">
+      <a href="#contacte" class="bg-madera-calida text-crema-organico px-8 py-3 rounded-full text-xs tracking-widest uppercase hover:bg-verde-picea hover:-translate-y-0.5 transition-all duration-300 shadow-sm inline-block">
         Reservar
       </a>
     </div>
   </div>
 </header>
+
+<style is:global>
+  /* Este truco hace que al saltar a una sección, el Header no la tape */
+  section {
+    scroll-margin-top: 6rem; /* Esto es la altura del header (24px * 4 = 96px) */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

@@ -1,17 +1,46 @@
 ---
+// Importamos el Layout base que contiene el Header y los estilos globales
 import Layout from '../layouts/Layout.astro';
+
+// Importamos los componentes de la página (Asegúrate de que las rutas sean correctas)
 import Hero from '../components/Hero.astro';
-import About from '../components/About.astro'; // Importamos la nueva sección
+import About from '../components/About.astro';
+
+// Importamos el componente interactivo de React para las categorías
+// Nota: Usamos la extensión .jsx
+import Experiences from '../components/Experiencies.jsx';
 ---
 
-<Layout title="Licoturisme i Natura">
+<Layout title="Licoturisme i Natura al Parc Natural">
+  
   <Hero />
-  
+
   <About />
-  
-  <section id="experiencies" class="min-h-screen bg-verde-picea text-crema-organico py-24">
-    <div class="max-w-7xl mx-auto px-6">
-       <h2 class="font-the-seasons text-5xl">Pròximes Experiències</h2>
+
+  <Experiences client:load />
+
+  <footer class="bg-verde-picea text-crema-organico py-20 border-t border-crema-organico/10">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="font-the-seasons text-4xl mb-6">Comencem l'aventura?</h2>
+      <p class="font-aktifob text-crema-organico/60 mb-10 tracking-widest uppercase text-xs">
+        Matadepera, Barcelona — A tocar del Parc Natural
+      </p>
+      <a 
+        href="mailto:hola@lacasadefusta.com" 
+        class="inline-block border border-crema-organico/30 px-12 py-4 rounded-full font-aktifob text-xs tracking-[0.2em] uppercase hover:bg-crema-organico hover:text-verde-picea transition-all duration-500"
+      >
+        Contactar ara
+      </a>
+      
+      <div class="mt-20 pt-10 border-t border-crema-organico/5 flex flex-col md:flex-row justify-between items-center gap-6 opacity-40 font-aktifob text-[10px] tracking-widest uppercase">
+        <p>© 2026 La Casa de Fusta. Tots els drets reservats.</p>
+        <div class="flex gap-8">
+          <a href="#" class="hover:text-madera-calida transition-colors">Avís Legal</a>
+          <a href="#" class="hover:text-madera-calida transition-colors">Privacitat</a>
+          <a href="#" class="hover:text-madera-calida transition-colors">Cookies</a>
+        </div>
+      </div>
     </div>
-  </section>
+  </footer>
+
 </Layout>
